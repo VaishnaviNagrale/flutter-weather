@@ -7,7 +7,7 @@ class Location{
      //Permission
      LocationPermission permission = await Geolocator.checkPermission();
      if(permission == LocationPermission.denied || permission == LocationPermission.deniedForever){
-       print('permission given');
+       print('permission given to access your location');
        LocationPermission assked = await Geolocator.requestPermission();
      }
      else{
